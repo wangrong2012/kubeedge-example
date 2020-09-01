@@ -15,7 +15,7 @@ spec:
         k8s-app: kubeedge-web-app
     spec:
       nodeSelector:
-        node-role.kubernetes.io/master: ""
+        node-role.kubernetes.io/master: "true"
       hostNetwork: true
       containers:
       - name: kubeedge-web-app

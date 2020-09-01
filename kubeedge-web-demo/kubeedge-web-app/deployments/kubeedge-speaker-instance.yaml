@@ -1,4 +1,4 @@
-apiVersion: devices.kubeedge.io/v1alpha1
+apiVersion: devices.kubeedge.io/v1alpha2
 kind: Device
 metadata:
   name: speaker-01
@@ -11,7 +11,8 @@ spec:
   nodeSelector:
     nodeSelectorTerms:
     - matchExpressions:
-      - key: ''
+      - key: 'kubernetes.io/hostname'
         operator: In
         values:
-        - raspberrypi
+        - second-edgenode
+            
